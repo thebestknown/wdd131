@@ -8,11 +8,11 @@
     <meta name="author" content="Jeimy Espinoza">
     <link rel="stylesheet" href="styles/base.css">
     <script src="scripts/getdates.js" defer></script>
-
 </head>
 <body>
     <header>
-        <h1>WDD 131: Dynamic Web Fundamentals - Jeimy Espinoza</h1>
+            <h1>WDD 131: Dynamic Web Fundamentals - <span class="highlight">Jeimy Espinoza</span></h1>
+    
         <nav>
             <a href="https://linkedin.com">LinkedIn</a>
             <a href="https://byupw.instructure.com/">Canvas</a>
@@ -22,36 +22,44 @@
     </header>
 
     <main>
-        <!--Creation of the cards-->
         <section class="card">
             <h2>About Me</h2>
-            <p>Hey! I'm Jeimy, and I'm from Ecuador. I currently work teaching English to children between 5 and 11 years old, I like children and it is very fun to learn with them day by day, I love to draw and I want to succeed in my career in software development.</p>
-            <img src="images/profile.webp" alt="profile picture">
-            
-            <!-- Country section added here -->
+            <div class="about-me">
+                <div class="text">
+                    <p>Hey! I'm Jeimy, and I'm from Ecuador. I currently work teaching English to children between 5 and 11 years old. I like children, and it is very fun to learn with them day by day. I love to draw, and I want to succeed in my career in software development.</p>
+                </div>
+                <div class="image">
+                    <img src="images/profile.webp" alt="profile picture">
+                </div>
+            </div>
             <h3>Quevedo, Ecuador</h3>
             <div class="country-section">
-                <img src="images/ecuador.jpg" alt="Official Flag of Ecuador">
                 <div>
-                    <p>Ecuador is such a special place, and I feel incredibly proud to call it home. Even though it’s a relatively small country, it’s so diverse you can experience the ocean, the Andes, the Amazon rainforest, and even the unique Galápagos Islands, all within a short distance. What really stands out about Ecuador is its warmth, not just in the weather, but in the people. Wherever you go, you’re met with smiles and kindness. The culture is so rich and vibrant, and you can see it everywhere, from our colorful markets to our traditional music and dances. And of course, the food is amazing. Whether it’s fresh ceviche on the coast or a comforting plate of locro de papa in the highlands, there’s always something delicious to try.</p>
+                    <img src="images/ecuador.jpg" alt="Official Flag of Ecuador">
                     <p class="flag-caption">Official Flag of Ecuador</p>
+                </div>
+                <div>
+                    <p>Ecuador is such a special place, and I feel incredibly proud to call it home. Even though it’s a relatively small country, it’s so diverse you can experience the ocean, the Andes, the Amazon rainforest, and even the unique Galápagos Islands, all within a short distance. What really stands out about Ecuador is its warmth, not just in the weather, but in the people. Wherever you go, you’re met with smiles and kindness. </p>
                 </div>
             </div>
         </section>        
 
         <section class="card">
-            <h2>Web Dev Resurces</h2>
+            <h2>Web Dev Resources</h2>
             <ul>
                <li><a href="https://dev.to/">Dev.to Community</a></li>
                <li><a href="https://www.smashingmagazine.com/">Smashing Magazine</a></li>
                <li><a href="https://www.udemy.com/">Udemy</a></li>
+               <li><a href="https://www.w3schools.com/">W3 Schools</a></li>
+               <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+               <li><a href="https://placeholder.com/">Image Placeholder</a></li>
             </ul>
         </section>
     </main>
 
     <footer>
         <p>
-            &copy; <span id="currentyear"></span> Jeimy Espinoza • Ecuador
+            &copy; <span id="currentyear"></span> 🐧 Jeimy Espinoza 😸 • Ecuador
         </p>
         <p id="lastModified"></p>
     </footer>
