@@ -46,6 +46,14 @@ footer {
     cursor: pointer;
 }
 
+.hamburger::before {
+    content: "☰"; 
+}
+
+.hamburger.open::before {
+    content: "❎"; 
+}
+
 /* Mobile Navigation Menu */
 nav {
     background-color: #36454f;
@@ -93,19 +101,10 @@ nav a:hover {
     cursor: pointer;
 }
 
-#menu::before {
-    content: "☰";
-}
-
-#menu.open::before {
-    content: "❎";
-}
-
 /* Navigation for Larger Screens */
 @media (min-width: 740px) {
     nav {
         display: flex; 
-        flex-direction: row;
         position: static;
         background-color: transparent;
     }
