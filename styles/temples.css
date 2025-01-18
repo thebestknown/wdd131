@@ -14,7 +14,7 @@ body {
 header {
     background-color: #4a148c;
     color: white;
-    text-align: center;
+    text-align: left;
     padding: 1rem;
 }
 
@@ -57,4 +57,24 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+figure {
+    background: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
