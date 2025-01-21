@@ -1,0 +1,17 @@
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero img {
+    object-fit: cover;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-color: #f4f4f4; 
+    padding: 1rem;
+}
