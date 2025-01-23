@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Bahamas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <meta name="description" content="Discover The Bahamas - Explore its breathtaking beaches, rich culture, and fascinating data. Learn about its weather, geography, and more!">
     <meta name="author" content="Jeimy Espinoza">
     <link rel="stylesheet" href="styles/place.css">
@@ -13,5 +14,44 @@
     <header>
         <h1>The Bahamas</h1>
     </header>
+    <main>
+        <div class="data">
+            <h2>Data</h2>
+            <ul>
+                <li><strong>Area:</strong> 13,878 sq km</li>
+                <li><strong>Population:</strong> 395,361</li>
+                <li><strong>Capital:</strong> Nassau</li>
+                <li><strong>Languages:</strong> English</li>
+                <li><strong>Currency:</strong> Bahamian Dollar (BSD)</li>
+                <li><strong>Time Zone:</strong> UTC-5</li>
+                <li><strong>Calling Code:</strong> +1-242</li>
+                <li><strong>Internet TLD:</strong> .bs</li>
+            </ul>
+        </div>
+    
+        <div class="image-container">
+            <picture>
+                <source srcset="" media="(min-width: 1000px)">
+                <source srcset="" media="(min-width: 550px)">
+                <img src="" alt="Beautiful beaches of The Bahamas">
+            </picture>
+        </div>
+    
+        <div class="weather">
+            <h2>Weather</h2>
+            <ul>
+                <li><strong>Temperature:</strong> 28°C</li>
+                <li><strong>Conditions:</strong> Sunny</li>
+                <li><strong>Wind:</strong> 15 km/h</li>
+                <li><strong>Wind Chill:</strong> <span id="windchill">Calculating...</span></li>
+            </ul>
+        </div>
+    </main>
+    
+    <footer>
+        <p>©2024 Your Name - The Bahamas</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+    </footer>
+    
 </body>
 </html>
