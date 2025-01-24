@@ -18,3 +18,35 @@ header {
     text-align: center;
     padding: 20px 0;
 }
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.data, .weather {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 300px;
+}
+
+.image-container {
+    flex: 1 1 100%;
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .data, .weather {
+        flex: 1 1 100%;
+    }
+}
