@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Temples</title>
+    <meta name="description" content="Filtered temples gallery using JavaScript for dynamic filtering.">
+    <meta name="author" content="Jeimy Espinoza">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <script defer src="scripts/filtered-temples.js"></script>
+</head>
+<body>
+    
+    <header>
+        <h1>Filtered Temple Album</h1>
+        <button class="hamburger"></button>
+        <nav>
+            <ul>
+                <li><button id="all">Home</button></li>
+                <li><button id="old">Old</button></li>
+                <li><button id="new">New</button></li>
+                <li><button id="large">Large</button></li>
+                <li><button id="small">Small</button></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="temple-container" class="gallery">
+            <!-- for the dynamically generated HTML -->
+        </section>
+    </main>
+    
+    <footer>
+        <p>©2024 🌷Jeimy Espinoza🌷 Ecuador</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
