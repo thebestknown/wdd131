@@ -1,9 +1,14 @@
-const hamburger = document.querySelector('.hamburger');
-const nav = document.querySelector('nav');
+document.addEventListener("DOMContentLoaded", () => {
+    displayTemples(temples);
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+    document.querySelectorAll("nav a").forEach(link => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
+            e.target.classList.add("active");
+            filterTemples(e.target.dataset.filter);
+        });
+    });
+
+    document.getElementById("lastModified").textContent = document.lastModified;
 });
-
-document.getElementById("lastModified").textContent = document.lastModified;

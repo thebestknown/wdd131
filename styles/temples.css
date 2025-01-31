@@ -1,107 +1,206 @@
-:root {
-    --primary-color: #59005c; 
-    --secondary-color: #f8f8f8; 
-    --background-color: #f3e0fa; 
-    --text-color: #333333;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', Arial, sans-serif;
-    margin: 0;
-    color: var(--text-color);
-    background-color: var(--background-color);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
 }
 
 header {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    background-color: #4a148c;
+    color: white;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 0 30px #333;
+}
+
+h1 {
+    font-size: 1.5rem;
     text-align: center;
-    padding: 20px 0;
-}
-
-main {
-    position: relative;
-    margin: 0;
-    padding: 0;
-}
-
-/* Hero Image */
-.image-container {
-    position: relative;
-}
-
-.image-container img {
-    width: 100%;
-    height: auto;
-    display: block;
-    position: relative;
-}
-
-/* Data and Weather - Common Styles */
-.data-overlay, .weather-overlay {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 600px;
-    text-align: left;
-}
-
-.data-overlay h2, .weather-overlay h2 {
-    margin: 0 0 10px;
-    font-size: 1.2rem;
-    color: var(--primary-color);
-    text-align: center;
-}
-.weather-overlay {
-    top: 10%;
-    right: 5%;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    margin: 8px 0;
-    font-size: 1rem;
 }
 
 footer {
+    background-color: #4a148c;
+    color: white;
     text-align: center;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 10px 0;
-    font-size: 0.8rem;
+    padding: 1rem 0;
 }
 
-/* Large Screen Layout */
-@media (min-width: 1000px) {
-    main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+/* Hamburger Button */
+.hamburger {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.hamburger::before {
+    content: "☰"; 
+}
+
+.hamburger.open::before {
+    content: "❎"; 
+}
+
+/* Mobile Navigation Menu */
+nav {
+    background-color: #36454f;
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 3.5rem;
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    border-bottom: 1px solid #6a1b9a;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    background-color: #6a1b9a;
+}
+
+.active {
+    color: yellow;
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #000;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+/* Navigation for Larger Screens */
+@media (min-width: 740px) {
+    nav {
+        display: flex; 
+        position: static;
+        background-color: transparent;
     }
 
-    .image-container {
-        flex: 1 1 70%;
-        position: relative;
+    nav ul {
+        display: flex; 
+        justify-content: flex-end;
     }
 
-    .data-overlay {
-        position: absolute;
-        top: 10%;
-        left: 5%;
-        max-width: 300px;
+    nav li {
+        border: none;
     }
 
-    .weather-overlay {
-        position: absolute;
-        top: 10%;
-        right: 5%;
-        max-width: 300px;
+    nav a {
+        padding: 1rem;
+        color: white;
     }
+
+    nav a:hover {
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
+    .hamburger {
+        display: none; 
+    }
+}
+
+/* Gallery Styling */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+figure {
+    background: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Additional Classes */
+.stuff {
+    margin: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #bed;
+    max-width: 580px;
+    height: 100vh;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
+    background-color: #333;
+    color: #fff;
+}
+
+.navigation a {
+    display: none;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navigation a:hover {
+    background-color: #bbb;
+    color: #333;
+    font-weight: 700;
+}
+
+.open a {
+    display: block;
+}
+
+.active::before {
+    content: "📍";  
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }

@@ -3,34 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filtered Temples</title>
-    <meta name="description" content="Filtered temples gallery using JavaScript for dynamic filtering.">
+    <title>Temple Album</title>
+    <meta name="description" content="This is the temples gallery which uses JavaScript for better dynamism.">
     <meta name="author" content="Jeimy Espinoza">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/filtered-temples.css">
     <script defer src="scripts/filtered-temples.js"></script>
 </head>
 <body>
     
     <header>
-        <h1>Filtered Temple Album</h1>
+        <h1>Temple Album</h1>
         <button class="hamburger"></button>
         <nav>
             <ul>
-                <li><button id="all">Home</button></li>
-                <li><button id="old">Old</button></li>
-                <li><button id="new">New</button></li>
-                <li><button id="large">Large</button></li>
-                <li><button id="small">Small</button></li>
+                <li><a href="#" data-filter="all" class="active">Home</a></li>
+                <li><a href="#" data-filter="old">Old</a></li>
+                <li><a href="#" data-filter="new">New</a></li>
+                <li><a href="#" data-filter="large">Large</a></li>
+                <li><a href="#" data-filter="small">Small</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
-        <section id="temple-container" class="gallery">
-            <!-- for the dynamically generated HTML -->
-        </section>
+        <h2>Temple Gallery</h2>
+        <div class="res-grid"></div>
     </main>
-    
     <footer>
         <p>©2024 🌷Jeimy Espinoza🌷 Ecuador</p>
         <p>Last Modification: <span id="lastModified"></span></p>
