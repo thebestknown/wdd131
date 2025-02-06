@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +14,7 @@ body {
 }
 
 header, footer {
-    background-color: #3d003d;
+    background-color: #3d0019;
     color: white;
     text-align: center;
     padding: 1rem 0;
@@ -56,7 +55,7 @@ label {
 
 .optional {
     font-weight: normal;
-    color: blue;
+    color: rgb(0, 0, 116);
     font-size: 0.9rem;
 }
 
@@ -82,7 +81,7 @@ select, input[type="date"], input[type="text"], textarea {
 
 .rating label {
     font-size: 1.5rem;
-    color: gray;
+    color: rgb(53, 37, 46);
     cursor: pointer;
     transition: color 0.3s;
 }
@@ -120,17 +119,13 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #ddd;
+    background-color: #d613bc;
     border-color: #bbb;
 }
 
 footer p {
     margin: 5px 0;
     font-size: 0.9rem;
-}
-
-.flower {
-    color: pink;
 }
 
 @media (max-width: 600px) {
