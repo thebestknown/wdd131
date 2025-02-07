@@ -86,9 +86,8 @@ select, input[type="date"], input[type="text"], textarea {
     transition: color 0.3s;
 }
 
-.rating input:checked ~ label,
-.rating label:hover,
-.rating label:hover ~ label {
+.rating input:checked + label,
+.rating label:hover {
     color: gold;
 }
 
