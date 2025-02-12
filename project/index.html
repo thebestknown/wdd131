@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personalized Recipe Hub</title>
-    <meta name="description" content="The site will allow users to explore categorized recipes, search based on ingredients, and save their favorite meals.">
+    <meta name="description" content="<meta name="description" content="Find, save, and customize recipes with Personalized Recipe Hub. Search based on ingredients and save your favorite meals.">
     <meta name="author" content="Jeimy Espinoza">
     <link rel="stylesheet" href="styles/styles.css">
     <script defer src="scripts/project.js"></script>
@@ -30,33 +30,24 @@
                 <button id="explore-btn">Explore Recipes</button>
             </div>
             <div class="hero-image">
-                <img src="images/hero-image.jpg" alt="Delicious food">
+                <img src="images/hero-image.jpg" alt="Delicious food" loading="lazy">
             </div>
         </section>
 
-        <!-- Featured Recipes Section -->
-        <section class="featured-recipes">
-            <h2>Popular Recipes</h2>
-            <div class="recipe-grid">
-                <div class="recipe-card">
-                    <img src="" alt="Spaghetti Carbonara">
-                    <h3>Spaghetti Carbonara</h3>
-                </div>
-                <div class="recipe-card">
-                    <img src="" alt="Avocado Toast">
-                    <h3>Avocado Toast</h3>
-                </div>
-                <div class="recipe-card">
-                    <img src="" alt="Grilled Chicken Salad">
-                    <h3>Grilled Chicken Salad</h3>
-                </div>
-            </div>
+        <!-- Favorite Recipes Form -->
+        <section class="favorite-form">
+            <h2>Save Your Favorite Recipe</h2>
+            <form id="favorite-recipe-form">
+                <label for="favorite-recipe">Enter your favorite recipe:</label>
+                <input type="text" id="favorite-recipe" name="favorite-recipe" required>
+                <button type="submit">Save Recipe</button>
+            </form>
         </section>
     </main>
 
     <footer>
         <p>©2024 🌷Jeimy Espinoza🌷 Ecuador</p>
-        <p><span id="lastModified"></span></p>
+        <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
 </body>
 </html>
