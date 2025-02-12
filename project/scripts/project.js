@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Botón para explorar recetas
+    // to search the recipes
     const exploreBtn = document.getElementById("explore-btn");
     if (exploreBtn) {
         exploreBtn.addEventListener("click", function () {
