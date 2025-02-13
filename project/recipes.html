@@ -6,7 +6,7 @@
     <title>Recipes - Personalized Recipe Hub</title>
     <meta name="description" content="Search for recipes based on the ingredients you have.">
     <link rel="stylesheet" href="styles/styles.css">
-    <script defer src="scripts/script.js"></script>
+    <script defer src="scripts/project.js"></script>
 </head>
 <body>
     <header>
@@ -21,56 +21,49 @@
     </header>
 
     <main>
-        <section class="search">
-            <h2>Find a Recipe</h2>
-            <input type="text" id="ingredient-input" placeholder="Enter an ingredient">
-            <button id="search-btn">Search</button>
-        </section>
-
-        <section class="recipe-list">
-            <h2>Available Recipes</h2>
+        <section class="featured-recipes">
+            <h2>Featured Recipes</h2>
             <div class="recipe-grid">
-                <!-- Recipe 1 -->
                 <div class="recipe-card">
                     <img src="" alt="Spaghetti Carbonara" loading="lazy">
                     <h3>Spaghetti Carbonara</h3>
                 </div>
-                <!-- Recipe 2 -->
+    
                 <div class="recipe-card">
                     <img src="" alt="Avocado Toast" loading="lazy">
                     <h3>Avocado Toast</h3>
                 </div>
-                <!-- Recipe 3 -->
+    
                 <div class="recipe-card">
                     <img src="" alt="Grilled Chicken Salad" loading="lazy">
                     <h3>Grilled Chicken Salad</h3>
                 </div>
-                <!-- Recipe 4 -->
+    
                 <div class="recipe-card">
                     <img src="" alt="Homemade Pizza" loading="lazy">
                     <h3>Homemade Pizza</h3>
                 </div>
-                <!-- Recipe 5 -->
+    
                 <div class="recipe-card">
-                    <img src="" alt="Smoothie Bowl" loading="lazy">
+                    <img src="" alt="Berry Smoothie Bowl" loading="lazy">
                     <h3>Berry Smoothie Bowl</h3>
                 </div>
-                <!-- Recipe 6 -->
+    
                 <div class="recipe-card">
                     <img src="" alt="Chicken Tacos" loading="lazy">
                     <h3>Chicken Tacos</h3>
                 </div>
-                <!-- Recipe 7 -->
+    
                 <div class="recipe-card">
                     <img src="" alt="Vegan Buddha Bowl" loading="lazy">
                     <h3>Vegan Buddha Bowl</h3>
                 </div>
-                <!-- Recipe 8 -->
+    
                 <div class="recipe-card">
                     <img src="" alt="Chocolate Chip Cookies" loading="lazy">
                     <h3>Chocolate Chip Cookies</h3>
                 </div>
-                <!-- Recipe 9 -->
+    
                 <div class="recipe-card">
                     <img src="" alt="Garlic Butter Shrimp" loading="lazy">
                     <h3>Garlic Butter Shrimp</h3>
@@ -81,6 +74,7 @@
 
     <footer>
         <p>©2024 🌷Jeimy Espinoza🌷 Ecuador</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
 </body>
 </html>

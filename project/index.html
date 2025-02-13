@@ -24,13 +24,16 @@
     <main>
         <!-- Hero Section -->
         <section class="hero">
-            <div class="hero-text">
+            <picture>
+                <source srcset="images/eggs-small.webp" media="(max-width: 500px)">
+                <source srcset="images/eggs-medium.webp" media="(max-width: 1000px)">
+                <img src="images/eggs-large.webp" alt="Delicious food on a table" class="hero-bg">
+            </picture>
+        
+            <div class="hero-overlay">
                 <h2>Find, Save, and Customize Recipes</h2>
                 <p>Discover a world of personalized recipes based on the ingredients you have.</p>
                 <button id="explore-btn">Explore Recipes</button>
-            </div>
-            <div class="hero-image">
-                <img src="images/turkish_eggs.webp" alt="Delicious food" loading="lazy">
             </div>
         </section>
 
