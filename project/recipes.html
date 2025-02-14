@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipes - Personalized Recipe Hub</title>
     <meta name="description" content="Search for recipes based on the ingredients you have.">
+    <meta name="author" content="Jeimy Espinoza">
     <link rel="stylesheet" href="styles/styles.css">
     <script defer src="scripts/project.js"></script>
 </head>
@@ -23,8 +24,8 @@
     <main>
         <!-- Recipe Controls -->
         <section class="recipe-controls">
+            <h2 class="visually-hidden">Recipe Controls</h2>
             <input type="text" id="search-recipes" placeholder="🔎 Search by ingredients">
-            <button id="save-recipe">📂 Save Recipe</button>
             <select id="diet-filter">
                 <option value="all">All Diets</option>
                 <option value="vegan">Vegan</option>
@@ -32,7 +33,7 @@
                 <option value="gluten-free">Gluten-Free</option>
             </select>
         </section>
-
+    
         <!-- Featured Recipes -->
         <section class="featured-recipes">
             <h2>Featured Recipes</h2>
@@ -43,84 +44,78 @@
                     </picture>
                     <h3>Spaghetti Carbonara</h3>
                     <p class="recipe-description">Classic Italian pasta with eggs, cheese, pancetta, and pepper.</p>
+                    <p class="recipe-ingredients"><strong>Ingredients:</strong> Spaghetti, eggs, pancetta, Parmesan cheese, black pepper.</p>
+                    <p class="recipe-steps"><strong>Preparation:</strong> Cook spaghetti, mix eggs with cheese, fry pancetta, combine all with pasta.</p>
+                    <button class="save-recipe-btn" data-recipe="Spaghetti Carbonara">Save Recipe</button>
                 </div>
-
+                
                 <div class="recipe-card" data-diet="vegan">
                     <picture>
                         <img src="images/avocado-toast-large.webp" alt="Avocado Toast" loading="lazy">
                     </picture>
                     <h3>Avocado Toast</h3>
                     <p class="recipe-description">Healthy toast with mashed avocado, eggs, and seasonings.</p>
+                    <p class="recipe-ingredients"><strong>Ingredients:</strong> Bread, avocado, eggs, salt, pepper, chili flakes.</p>
+                    <p class="recipe-steps"><strong>Preparation:</strong> Toast bread, mash avocado, top with eggs, season, and serve.</p>
+                    <button class="save-recipe-btn" data-recipe="Avocado Toast">Save Recipe</button>
                 </div>
-
+                
                 <div class="recipe-card" data-diet="gluten-free">
                     <picture>
                         <img src="images/chicken-salad-large.webp" alt="Grilled Chicken Salad" loading="lazy">
                     </picture>
                     <h3>Grilled Chicken Salad</h3>
                     <p class="recipe-description">Salad with grilled chicken, greens, and a tangy dressing.</p>
+                    <p class="recipe-ingredients"><strong>Ingredients:</strong> Chicken breast, lettuce, cherry tomatoes, olive oil, lemon juice.</p>
+                    <p class="recipe-steps"><strong>Preparation:</strong> Grill chicken, chop veggies, mix with dressing, and serve.</p>
+                    <button class="save-recipe-btn" data-recipe="Grilled Chicken Salad">Save Recipe</button>
                 </div>
-
+                
                 <div class="recipe-card" data-diet="vegetarian">
                     <picture>
                         <img src="images/homemade-pizza-large.webp" alt="Homemade Pizza" loading="lazy">
                     </picture>
                     <h3>Homemade Pizza</h3>
                     <p class="recipe-description">Freshly baked pizza with homemade dough and fresh toppings.</p>
+                    <p class="recipe-ingredients"><strong>Ingredients:</strong> Pizza dough, tomato sauce, mozzarella, basil.</p>
+                    <p class="recipe-steps"><strong>Preparation:</strong> Roll dough, spread sauce, add cheese, bake at 220°C.</p>
+                    <button class="save-recipe-btn" data-recipe="Homemade Pizza">Save Recipe</button>
                 </div>
-
+                
                 <div class="recipe-card" data-diet="vegan">
                     <picture>
                         <img src="images/berry-smoothie-large.webp" alt="Berry Smoothie Bowl" loading="lazy">
                     </picture>
                     <h3>Berry Smoothie Bowl</h3>
                     <p class="recipe-description">Nutrient-packed smoothie bowl topped with fresh berries.</p>
+                    <p class="recipe-ingredients"><strong>Ingredients:</strong> Frozen berries, banana, almond milk, granola.</p>
+                    <p class="recipe-steps"><strong>Preparation:</strong> Blend berries, banana, and milk; pour into bowl, top with granola.</p>
+                    <button class="save-recipe-btn" data-recipe="Berry Smoothie Bowl">Save Recipe</button>
                 </div>
-
+                
                 <div class="recipe-card" data-diet="gluten-free">
                     <picture>
                         <img src="images/chicken-tacos-large.webp" alt="Chicken Tacos" loading="lazy">
                     </picture>
                     <h3>Chicken Tacos</h3>
                     <p class="recipe-description">Tasty tacos filled with seasoned grilled chicken and salsa.</p>
+                    <p class="recipe-ingredients"><strong>Ingredients:</strong> Corn tortillas, chicken, salsa, avocado, lime.</p>
+                    <p class="recipe-steps"><strong>Preparation:</strong> Cook chicken, warm tortillas, assemble tacos with toppings.</p>
+                    <button class="save-recipe-btn" data-recipe="Chicken Tacos">Save Recipe</button>
                 </div>
-
-                <div class="recipe-card" data-diet="vegan">
-                    <picture>
-                        <img src="images/buddha-bowl-large.webp" alt="Vegan Buddha Bowl" loading="lazy">
-                    </picture>
-                    <h3>Vegan Buddha Bowl</h3>
-                    <p class="recipe-description">Nourishing bowl with quinoa, fresh veggies, and dressing.</p>
-                </div>
-
-                <div class="recipe-card" data-diet="vegetarian">
-                    <picture>
-                        <img src="images/chocochips-large.webp" alt="Chocolate Chip Cookies" loading="lazy">
-                    </picture>
-                    <h3>Chocolate Chip Cookies</h3>
-                    <p class="recipe-description">Homemade cookies with gooey chocolate chips.</p>
-                </div>
-
-                <div class="recipe-card" data-diet="gluten-free">
-                    <picture>
-                        <img src="images/garlic-shrimp-large.webp" alt="Garlic Butter Shrimp" loading="lazy">
-                    </picture>
-                    <h3>Garlic Butter Shrimp</h3>
-                    <p class="recipe-description">Juicy shrimp sautéed in a rich garlic butter sauce.</p>
-                </div>
+                
             </div>
         </section>
-
+    
         <!-- Saved Recipes -->
         <section>
             <h2>Saved Recipes</h2>
             <ul id="saved-recipes"></ul>
         </section>
     </main>
-
+    
     <footer>
         <p>©2024 🌷Jeimy Espinoza🌷 Ecuador</p>
         <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
-</body>
-</html>
+    

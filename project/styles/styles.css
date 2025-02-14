@@ -195,7 +195,7 @@ nav ul li a {
 }
 
 .favorite-form button {
-    background-color: var(--header-text);
+    background-color: rgb(255, 214, 110);
     color: var(--header-bg);
     padding: 10px 15px;
     border: none;
@@ -343,4 +343,15 @@ footer {
     background-color: var(--footer-bg);
     color: white;
     margin-top: 20px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
