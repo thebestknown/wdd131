@@ -303,6 +303,39 @@ button:hover {
     background-color: var(--button-hover-bg);
 }
 
+.recipe-controls {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#search-recipes, #diet-filter {
+    padding: 10px;
+    font-size: 16px;
+    margin: 5px;
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+}
+
+#save-recipe {
+    background-color: var(--button-bg);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#save-recipe:hover {
+    background-color: var(--button-hover-bg);
+}
+
+#saved-recipes {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+
 /* Footer */
 footer {
     text-align: center;

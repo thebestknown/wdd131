@@ -1,39 +1,62 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // to search the recipes
-    const exploreBtn = document.getElementById("explore-btn");
-    if (exploreBtn) {
-        exploreBtn.addEventListener("click", function () {
-            window.location.href = "recipes.html";
-        });
-    }
+    const recipeCards = document.querySelectorAll(".recipe-card");
+    const searchInput = document.getElementById("search-recipes");
+    const saveButton = document.getElementById("save-recipe");
+    const savedRecipesContainer = document.getElementById("saved-recipes");
+    const dietFilter = document.getElementById("diet-filter");
 
-    // Search the recipes
-    const searchBtn = document.getElementById("search-btn");
-    if (searchBtn) {
-        searchBtn.addEventListener("click", function () {
-            const ingredient = document.getElementById("ingredient-input").value.toLowerCase();
-            const recipes = document.querySelectorAll(".recipe-card");
-
-            recipes.forEach(recipe => {
-                recipe.style.display = recipe.textContent.toLowerCase().includes(ingredient) ? "block" : "none";
+    // to search recipes by ingredients
+    if (searchInput) {
+        searchInput.addEventListener("input", function () {
+            const query = searchInput.value.toLowerCase();
+            recipeCards.forEach(card => {
+                const recipeName = card.querySelector("h3").textContent.toLowerCase();
+                card.style.display = recipeName.includes(query) ? "block" : "none";
             });
         });
     }
 
-    // To save the recipes in the local storage
-    const favoriteForm = document.getElementById("favorite-recipe-form");
-    if (favoriteForm) {
-        favoriteForm.addEventListener("submit", function (event) {
-            event.preventDefault();
-            const favoriteRecipe = document.getElementById("favorite-recipe").value;
-            localStorage.setItem("favoriteRecipe", favoriteRecipe);
-            alert("Your favorite recipe has been saved!");
+    // to save tecipes to local storage
+    if (saveButton) {
+        saveButton.addEventListener("click", function () {
+            const recipeName = searchInput.value;
+            if (recipeName) {
+                let savedRecipes = JSON.parse(localStorage.getItem("savedRecipes")) || [];
+                if (!savedRecipes.includes(recipeName)) {
+                    savedRecipes.push(recipeName);
+                    localStorage.setItem("savedRecipes", JSON.stringify(savedRecipes));
+                    displaySavedRecipes();
+                }
+            }
         });
     }
 
-    const lastModified = document.getElementById("lastModified");
-    if (lastModified) {
-        lastModified.textContent = document.lastModified;
+    function displaySavedRecipes() {
+        savedRecipesContainer.innerHTML = "";
+        let savedRecipes = JSON.parse(localStorage.getItem("savedRecipes")) || [];
+        savedRecipes.forEach(recipe => {
+            let listItem = document.createElement("li");
+            listItem.textContent = recipe;
+            savedRecipesContainer.appendChild(listItem);
+        });
+    }
+    displaySavedRecipes();
+
+    // to filter recipes by diet
+    if (dietFilter) {
+        dietFilter.addEventListener("change", function () {
+            const selectedDiet = dietFilter.value;
+            recipeCards.forEach(card => {
+                const dietType = card.getAttribute("data-diet");
+                card.style.display = selectedDiet === "all" || dietType === selectedDiet ? "block" : "none";
+            });
+        });
     }
 });
+
+const lastModified = document.getElementById("lastModified");
+ if (lastModified) {
+    lastModified.textContent = document.lastModified;
+}
+
 

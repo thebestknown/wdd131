@@ -21,95 +21,102 @@
     </header>
 
     <main>
+        <!-- Recipe Controls -->
+        <section class="recipe-controls">
+            <input type="text" id="search-recipes" placeholder="🔎 Search by ingredients">
+            <button id="save-recipe">📂 Save Recipe</button>
+            <select id="diet-filter">
+                <option value="all">All Diets</option>
+                <option value="vegan">Vegan</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="gluten-free">Gluten-Free</option>
+            </select>
+        </section>
+
+        <!-- Featured Recipes -->
         <section class="featured-recipes">
             <h2>Featured Recipes</h2>
             <div class="recipe-grid">
-    
-                <div class="recipe-card">
+                <div class="recipe-card" data-diet="vegetarian">
                     <picture>
-                        <source srcset="images/carbonara-small.webp" media="(max-width: 600px)">
-                        <source srcset="images/carbonara-medium.webp" media="(max-width: 1024px)">
                         <img src="images/carbonara-large.webp" alt="Spaghetti Carbonara" loading="lazy">
                     </picture>
                     <h3>Spaghetti Carbonara</h3>
+                    <p class="recipe-description">Classic Italian pasta with eggs, cheese, pancetta, and pepper.</p>
                 </div>
-    
-                <div class="recipe-card">
+
+                <div class="recipe-card" data-diet="vegan">
                     <picture>
-                        <source srcset="images/avocado-toast-small.webp" media="(max-width: 600px)">
-                        <source srcset="images/avocado-toast-medium.webp" media="(max-width: 1024px)">
                         <img src="images/avocado-toast-large.webp" alt="Avocado Toast" loading="lazy">
                     </picture>
                     <h3>Avocado Toast</h3>
+                    <p class="recipe-description">Healthy toast with mashed avocado, eggs, and seasonings.</p>
                 </div>
-    
-                <div class="recipe-card">
+
+                <div class="recipe-card" data-diet="gluten-free">
                     <picture>
-                        <source srcset="images/chicken-salad-small.webp" media="(max-width: 600px)">
-                        <source srcset="images/chicken-salad-medium.webp" media="(max-width: 1024px)">
                         <img src="images/chicken-salad-large.webp" alt="Grilled Chicken Salad" loading="lazy">
                     </picture>
                     <h3>Grilled Chicken Salad</h3>
+                    <p class="recipe-description">Salad with grilled chicken, greens, and a tangy dressing.</p>
                 </div>
-    
-                <div class="recipe-card">
+
+                <div class="recipe-card" data-diet="vegetarian">
                     <picture>
-                        <source srcset="images/homemade-pizza-small.webp" media="(max-width: 600px)">
-                        <source srcset="images/homemade-pizza-medium.webp" media="(max-width: 1024px)">
                         <img src="images/homemade-pizza-large.webp" alt="Homemade Pizza" loading="lazy">
                     </picture>
                     <h3>Homemade Pizza</h3>
+                    <p class="recipe-description">Freshly baked pizza with homemade dough and fresh toppings.</p>
                 </div>
-    
-                <div class="recipe-card">
+
+                <div class="recipe-card" data-diet="vegan">
                     <picture>
-                        <source srcset="images/berry-smoothie-small.webp" media="(max-width: 600px)">
-                        <source srcset="images/berry-smoothie-medium.webp" media="(max-width: 1024px)">
                         <img src="images/berry-smoothie-large.webp" alt="Berry Smoothie Bowl" loading="lazy">
                     </picture>
                     <h3>Berry Smoothie Bowl</h3>
+                    <p class="recipe-description">Nutrient-packed smoothie bowl topped with fresh berries.</p>
                 </div>
-    
-                <div class="recipe-card">
+
+                <div class="recipe-card" data-diet="gluten-free">
                     <picture>
-                        <source srcset="images/chicken-tacos-small.webp" media="(max-width: 600px)">
-                        <source srcset="images/chicken-tacos-medium.webp" media="(max-width: 1024px)">
                         <img src="images/chicken-tacos-large.webp" alt="Chicken Tacos" loading="lazy">
                     </picture>
                     <h3>Chicken Tacos</h3>
+                    <p class="recipe-description">Tasty tacos filled with seasoned grilled chicken and salsa.</p>
                 </div>
-    
-                <div class="recipe-card">
+
+                <div class="recipe-card" data-diet="vegan">
                     <picture>
-                        <source srcset="images/buddha-bowl-small.webp" media="(max-width: 600px)">
-                        <source srcset="images/buddha-bowl-medium.webp" media="(max-width: 1024px)">
                         <img src="images/buddha-bowl-large.webp" alt="Vegan Buddha Bowl" loading="lazy">
                     </picture>
                     <h3>Vegan Buddha Bowl</h3>
+                    <p class="recipe-description">Nourishing bowl with quinoa, fresh veggies, and dressing.</p>
                 </div>
-    
-                <div class="recipe-card">
+
+                <div class="recipe-card" data-diet="vegetarian">
                     <picture>
-                        <source srcset="images/chocochips-small.webp" media="(max-width: 600px)">
-                        <source srcset="images/chocochips-medium.webp" media="(max-width: 1024px)">
                         <img src="images/chocochips-large.webp" alt="Chocolate Chip Cookies" loading="lazy">
                     </picture>
                     <h3>Chocolate Chip Cookies</h3>
+                    <p class="recipe-description">Homemade cookies with gooey chocolate chips.</p>
                 </div>
-    
-                <div class="recipe-card">
+
+                <div class="recipe-card" data-diet="gluten-free">
                     <picture>
-                        <source srcset="images/garlic-shrimp-small.webp" media="(max-width: 600px)">
-                        <source srcset="images/garlic-shrimp-medium.webp" media="(max-width: 1024px)">
                         <img src="images/garlic-shrimp-large.webp" alt="Garlic Butter Shrimp" loading="lazy">
                     </picture>
                     <h3>Garlic Butter Shrimp</h3>
+                    <p class="recipe-description">Juicy shrimp sautéed in a rich garlic butter sauce.</p>
                 </div>
-    
             </div>
         </section>
+
+        <!-- Saved Recipes -->
+        <section>
+            <h2>Saved Recipes</h2>
+            <ul id="saved-recipes"></ul>
+        </section>
     </main>
-    
 
     <footer>
         <p>©2024 🌷Jeimy Espinoza🌷 Ecuador</p>
